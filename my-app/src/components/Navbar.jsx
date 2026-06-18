@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4">
+    <nav className="bg-gray-800 sticky top-0 inset-x-0 w-full text-white p-4">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="text-xl font-bold">My App</div>
