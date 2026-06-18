@@ -6,17 +6,20 @@ import heroImg from "./assets/hero.png";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [page, setPage] = useState("home");
 
   return (
     <>
-      <Navbar />
+      <Navbar page={page} setPage={setPage} />
       <div className="w-full h-screen flex flex-col items-center justify-center gap-4">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
-        >
-          count is {count}
-        </button>
+        {page === "home" && (
+          <button
+            onClick={() => setCount((count) => count + 1)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
+          >
+            count is {count}
+          </button>
+        )}
       </div>
     </>
   );
