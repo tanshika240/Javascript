@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
+import About from "./components/About";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -16,12 +17,7 @@ function App() {
           <Home />
         )}
         {page === "about" && (
-          <div className="text-center">
-            <h1 className="text-3xl font-bold">About Page</h1>
-            <p className="mt-2 text-gray-600">
-              This is the about page of the application.
-            </p>
-          </div>
+          <About />
         )}
         {page === "contact" && (
           <div className="text-center">
