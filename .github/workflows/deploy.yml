@@ -5,6 +5,7 @@ on:
     branches:
       - main # Change this to your default branch (e.g., master)
     paths:
+      - '.github/**'
       - 'weather-app/**' # Only trigger if files in this package change
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
