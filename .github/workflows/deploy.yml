@@ -28,6 +28,7 @@ jobs:
           cache-dependency-path: 'weather-app/package-lock.json'
 
       - name: Install Dependencies
+      working-directory: weather-app
         run: npm ci        # Installs all dependencies
 
       - name: Build Specific Package
