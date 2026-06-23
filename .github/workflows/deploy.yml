@@ -22,15 +22,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-level: '24' # Use your project's Node version
+          node-version: '24' # Use your project's Node version
           cache: 'npm'     # Or yarn / pnpm
+          cache-dependency-path: 'weather-app/package-lock.json'
 
       - name: Install Dependencies
-        run: npm ci        # Installs all workspace dependencies
+        run: npm ci        # Installs all dependencies
 
       - name: Build Specific Package
-        # Replace with your monorepo's specific build command
-        # e.g., "npm run build -w packages/my-target-app" or "npx turbo run build --filter=my-target-app"
         run: npm run build --workspace=weather-app 
 
       - name: Deploy to GitHub Pages
