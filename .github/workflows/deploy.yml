@@ -28,11 +28,12 @@ jobs:
           cache-dependency-path: 'weather-app/package-lock.json'
 
       - name: Install Dependencies
-      working-directory: weather-app
+        working-directory: weather-app
         run: npm ci        # Installs all dependencies
 
       - name: Build Specific Package
-        run: npm run build --workspace=weather-app 
+        working-directory: weather-app
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
